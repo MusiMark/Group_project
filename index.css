@@ -29,7 +29,7 @@ body{
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .topnav a:hover {
-  background-color: rgb(221, 221, 221);
+  background-color: rgb(56, 182, 56);
   color: rgb(0, 0, 0);
 }
 
@@ -38,7 +38,7 @@ body{
 }
 
 .topnav .active{
-  background-color: #717171;
+  background-color: rgb(33, 58, 33);
 }
 
 @media screen and (max-width: 600px) {
@@ -63,11 +63,6 @@ body{
   }
 }
 
-/*footer*/
-footer a img{
-  height: 50px;
-  width: 50px;
-}
 /*latest post area*/
 .latest{
   display: flex;
@@ -125,6 +120,54 @@ footer a img{
  font-weight: 600;
  overflow: hidden;
 }
+@media screen and (max-width:1000px) {
+  .latest{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  
+  .latest .div1{
+    width: 100%;
+    height: 700px;
+    border: none;
+    border-bottom: 1px solid rgb(128, 128, 128);
+    overflow: hidden;
+  }
+  .latest .div2{
+    width: 100%;
+    height: 700px;
+    margin: 0px;
+    border: none;
+    border-bottom: 1px solid rgb(128, 128, 128);
+  } 
+  .latest .div2 .postimg img{
+    width: 100%;
+    height:80%;
+  }  
+}
+@media screen and (max-width:500px) {
+  .latest .div2 .postname{
+    height: 40%;
+    font-size: 20px;
+    overflow: hidden;
+  }
+  .latest .div2 .postimg{
+    height: 60%;
+    overflow: hidden;
+  }
+}
+@media screen and (max-width:355px) {
+  .latest .div2 .postname{
+    height: 50%;
+    font-size: 20px;
+    overflow: hidden;
+  }
+  .latest .div2 .postimg{
+    height: 50%;
+    overflow: hidden;
+  }
+}
+
 
 /*other posts*/
 .all{
@@ -170,26 +213,120 @@ footer a img{
   margin: 0%;
   text-align: center;
 }
+@media screen and (max-width:1247px){
+  .hide{
+    display: none;
+  }  
+}
+@media screen and (max-width:943px){
+  .hide{
+    display: initial;
+  }  
+}
+/*subscription and footer*/
 .sub input{
   width: 300px;
-  height: 30px;
+  height: 40px;
   border-radius: 20px;
   padding: 10px;
   border: 1px solid rgb(0, 0, 0);
   outline: none;
+  font-size: 18px;
+  font-weight: bold;
 }
 .sub{
-  align-items: center;
-  font-size: x-large;
+  font-size: 20px;
+  font-weight: bold;
 }
 .sub button{
-  height: 30px;
+  height: 40px;
   width: 100px;
   border-radius: 20px;
   border: rgb(203, 255, 203);
   background-color: rgb(0, 128, 0);
   cursor: pointer;
+  margin-left: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
 }
+
+footer{
+  display: flex;
+}
+footer>div{
+  height: 160px;
+  width: 50%;
+  overflow: hidden;
+}
+footer p{
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0%;
+  margin-top: 20px;
+}
+footer .div2{
+  display: flex;
+}
+footer .div2 div{
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+footer .div2 a{
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0%;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+.image{
+  display: flex;
+}
+.image div{
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+.image img{
+  width: 40px;
+  height: 40px;
+}
+@media screen and (max-width:1170px) {
+  footer .div1{
+    height: 200px;
+  }
+}
+@media screen and (max-width:840px) {
+  footer{
+    flex-direction: column;
+    text-align: center;
+  }
+  footer>div{
+    height: 160px;
+    width: 100%;
+    overflow: hidden;
+  }
+  .image{
+    justify-content: center;
+  }
+  .copyright{
+    text-align: center;
+  } 
+}
+@media screen and (max-width:430px) {
+  .sub input{
+    width: 200px;
+  }
+  .sub button{
+    width: 80px;
+  }
+}
+
 
 /*slide animation*/
 .flip{
@@ -204,7 +341,7 @@ footer a img{
 }
 
 .anime1,.anime2{
-  font-family: algerian ;
+  font-weight: bold;
   position: relative !important;
   animation-duration: 15s;
   animation-timing-function: ease-in-out;
@@ -246,5 +383,57 @@ footer a img{
   100%{
     transform: translateY(-100px);
     opacity: 0;
+  }
+}
+@media screen and (max-width:560px){
+  .flip{
+    height: 140px ;
+  }  
+  @keyframes flip2{
+    0%,45%{
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    50%,97%{
+      transform: translateY(-100px);
+      opacity: 1;
+    }
+    100%{
+      transform: translateY(-200px);
+      opacity: 0;
+    }
+  }
+}
+@media screen and (max-width:360px){
+  .flip{
+    height: 200px ;
+  }  
+  @keyframes flip1{
+    0%,5%{
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    10%,40%{
+      transform: translateY(40px);
+      opacity: 1;
+    }
+    45%,100%{
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+  }
+  @keyframes flip2{
+    0%,45%{
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    50%,97%{
+      transform: translateY(-100px);
+      opacity: 1;
+    }
+    100%{
+      transform: translateY(-200px);
+      opacity: 0;
+    }
   }
 }
