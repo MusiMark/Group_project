@@ -5,45 +5,88 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="group.css">
+    <link rel="stylesheet" href="index.css">
     <title>Log In</title>
 </head>
 <body>
     <header>
-        <div class="nav"><p>Nav bar</p></div>
-    </header>
-    <div class="main">
-        <div class="side1">
-            <p>Dashboard</p>
+        <div class="wel">
+            <div>Teenz Africa</div>
         </div>
-        <div class="side2">
-            <div>
-
+        <div class="topnav" id="myTopnav">
+          <a href="index.html" class="active">Home</a>
+          <a href="#news">News</a>
+          <a href="#Trending">Trending</a>
+          <a href="#about">Latest</a>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+        <div class="flip">
+          <div class="anime1">Welcome to Teenz Africa</div>
+          <div class="anime2">Connect. Motivate.  Solve.</div>
+        </div>
+    </header>
+    <div class="main-content">
+        <div>
+            <div class="heading">
+                LOG IN
             </div>
-            <div class="main-content">
+            <div class="login_content">
                 <div>
-                    <div class="heading">
-                        Log In
-                    </div>
-                    <div>
-                        <div>
-                            <p for="uname">Username:</p>
-                            <input type="text" id="uname"><br>
-                            <small></small>
-                        </div>
-                        <div>
-                            <p for="password">Password:</p>
-                            <input type="password" name="" id="passwrd"><br>
-                            <small></small><br><br>
-                        </div>
-                        <div>
-                            <a href="signup.html">Don't have an account</a><br>
-                            <button id="send">Log In</button>
-                        </div>
-                    </div>
+                    <p>Username:</p>
+                    <input type="text" id="uname"><br>
+                    <small></small>
+                </div>
+                <div>
+                    <p>Password:</p>
+                    <input type="password" name="" id="passwrd"><br>
+                    <small></small><br>
+                    <a href="signup.html">Don't have an account</a><br>
+                </div>
+                <div>
+                    <br>
+                    <button id="send">Log In</button>
                 </div>
             </div>
         </div>
     </div>
+    <!--subscription and footer-->
+
+<footer>
+    <div class="div1">
+      <form action="" class="sub">
+        <div style="padding-bottom: 10px;">Subscribe to our newsletter to get the latest posts sent to your email</div>
+        <div><input type="email" placeholder="Email Address"><button onmousedown="this.style.background='rgb(0, 100, 0)';"  type="submit">Subscribe</button></div>
+      </form>
+      <div>
+        <p>Follow us on</p>
+        <div class="image">
+          <div><img src="4202110_facebook_logo_social_social media_icon.svg" alt="facebook_logo"></div>
+          <div><img src="294655_twitter_icon.svg" alt="twitter_icon"></div>
+          <div><img src="834711_pinterest_icon.svg" alt="pinterest_icon"></div>
+          <div><img src="2993766_instagram_social media_icon.svg" alt="instagram_social media_icon"></div>
+        </div>
+      </div>
+    </div>
+    <div class="div2">
+      <div>
+        <a href="index.html">Home</a>
+        <a>Trending</a>
+        <a>About Us</a>
+        <a href="login.html">Log In</a>
+      </div>
+      <div>
+        <a>Latest</a>
+        <a>FAQ</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="signup.html">Sign Up</a>
+      </div>
+    </div>
+  </footer>
+  <div class="copyright">
+    &copy;2021TeenzAfrica.All Rights Reserved
+  </div>
 </body>
 <script>
 const uname = document.getElementById('uname');
