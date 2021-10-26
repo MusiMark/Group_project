@@ -41,6 +41,10 @@ body{
   background-color: rgb(33, 58, 33);
 }
 
+.float{
+  float: right !important;
+}
+
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
@@ -61,6 +65,10 @@ body{
     display: block;
     text-align: left;
   }
+  .float{
+    float: none !important;
+  }
+  
 }
 /*links*/
 .links{
